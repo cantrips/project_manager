@@ -1,0 +1,1 @@
+1 - add concept of "Loop List" (move through stages in a loop rather than check items off)
