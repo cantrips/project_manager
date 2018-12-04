@@ -1,6 +1,6 @@
 package io.ueb.projectlist.model;
 
-public class ChecklistItem {
+public class ListItem {
 
     private String name;
     private boolean complete = false;

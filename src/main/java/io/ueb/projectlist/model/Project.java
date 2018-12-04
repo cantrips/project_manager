@@ -4,7 +4,12 @@ import java.util.List;
 
 public class Project {
     private String name;
+    private Inbox inbox;
     private List<Checklist> checklists;
+    private List<LoopList> loopLists;
+    private List<Task> tasks;
+    private List<String> outcomes;
+    private List<Resource> resources;
 
     public String getName() {
         return name;
@@ -20,5 +25,45 @@ public class Project {
 
     public void setChecklists(List<Checklist> checklists) {
         this.checklists = checklists;
+    }
+
+    public List<LoopList> getLoopLists() {
+        return loopLists;
+    }
+
+    public void setLoopLists(List<LoopList> loopLists) {
+        this.loopLists = loopLists;
+    }
+
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
+    }
+
+    public List<String> getOutcomes() {
+        return outcomes;
+    }
+
+    public void setOutcomes(List<String> outcomes) {
+        this.outcomes = outcomes;
+    }
+
+    public Inbox getInbox() {
+        return inbox;
+    }
+
+    public void setInbox(Inbox inbox) {
+        this.inbox = inbox;
+    }
+
+    public List<Resource> getResources() {
+        return resources;
+    }
+
+    public void setResources(List<Resource> resources) {
+        this.resources = resources;
     }
 }

@@ -1,6 +1,7 @@
 package io.ueb.projectlist;
 
 import io.ueb.projectlist.model.Project;
+import io.ueb.projectlist.model.TaskStatus;
 import io.ueb.projectlist.util.ProjectFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,13 +21,14 @@ public class ProjectFactoryTest {
 
         assertThat(project.getName()).isEqualTo("some project name");
         assertThat(project.getChecklists().get(0).getChecklistItems().get(0).getName()).isEqualTo("some checklist item");
-        assertThat(project.getLooplists().get(0).getChecklistItems().get(0).getName()).isEqualTo("some looplist item");
+        assertThat(project.getLoopLists().get(0).getChecklistItems().get(0).getName()).isEqualTo("some looplist item");
         assertThat(project.getTasks().get(0).getName()).isEqualTo("some task");
-        assertThat(project.getTasks().get(0).getStatus()).isEqualTo(TaskStatus.Next);
-        assertThat(project.getTasks().get(1).getStatus()).isEqualTo(TaskStatus.Waiting);
+        assertThat(project.getTasks().get(0).getStatus()).isEqualTo(TaskStatus.NEXT);
+        assertThat(project.getTasks().get(1).getStatus()).isEqualTo(TaskStatus.WAITING);
+        assertThat(project.getTasks().get(1).getTradeoffs()).isEqualTo("some tradeoff");
         assertThat(project.getResources().get(0).getName()).isEqualTo("some resource");
-        assertThat(project.getOutcomes().get(0).getName()).isEqualTo("some outcome");
-        assertThat(project.getInbox().get(0).getName()).isEqualTo("some inbox item");
+        assertThat(project.getOutcomes()).isEqualTo("some outcome");
+        assertThat(project.getInbox().getInboxItems().get(0)).isEqualTo("some inbox item");
 
     }
 }
