@@ -1,8 +1,6 @@
 package io.ueb.projectlist.util;
 
-import io.ueb.projectlist.model.Checklist;
-import io.ueb.projectlist.model.Looplist;
-import io.ueb.projectlist.model.Project;
+import io.ueb.projectlist.model.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,9 +15,16 @@ public class ProjectFactory {
         List<Looplist> looplists = new ArrayList<>();
         looplists.add(LooplistFactory.buildLooplist());
 
+        List<String> outcomes = new ArrayList<>();
+        outcomes.add("some outcome");
+
         project.setName("some project name");
         project.setChecklists(checklists);
         project.setlooplists(looplists);
+        project.setTasks(TaskListFactory.buildTaskList());
+        project.setOutcomes(outcomes);
+        project.setResources(ResourcesFactory.buildResourceList());
+        project.setInbox(InboxFactory.buildInbox());
 
         return project;
     }

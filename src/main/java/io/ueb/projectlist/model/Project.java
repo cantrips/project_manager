@@ -6,7 +6,7 @@ public class Project {
     private String name;
     private Inbox inbox;
     private List<Checklist> checklists;
-    private List<LoopList> loopLists;
+    private List<Looplist> looplists;
     private List<Task> tasks;
     private List<String> outcomes;
     private List<Resource> resources;
@@ -27,12 +27,12 @@ public class Project {
         this.checklists = checklists;
     }
 
-    public List<LoopList> getLoopLists() {
-        return loopLists;
+    public List<Looplist> getlooplists() {
+        return looplists;
     }
 
-    public void setLoopLists(List<LoopList> loopLists) {
-        this.loopLists = loopLists;
+    public void setlooplists(List<Looplist> looplists) {
+        this.looplists = looplists;
     }
 
     public List<Task> getTasks() {

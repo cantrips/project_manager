@@ -21,14 +21,14 @@ public class ProjectFactoryTest {
 
         assertThat(project.getName()).isEqualTo("some project name");
         assertThat(project.getChecklists().get(0).getChecklistItems().get(0).getName()).isEqualTo("some checklist item");
-        assertThat(project.getLoopLists().get(0).getChecklistItems().get(0).getName()).isEqualTo("some looplist item");
+        assertThat(project.getlooplists().get(0).getLooplistItems().get(0).getName()).isEqualTo("some looplist item");
         assertThat(project.getTasks().get(0).getName()).isEqualTo("some task");
         assertThat(project.getTasks().get(0).getStatus()).isEqualTo(TaskStatus.NEXT);
         assertThat(project.getTasks().get(1).getStatus()).isEqualTo(TaskStatus.WAITING);
-        assertThat(project.getTasks().get(1).getTradeoffs()).isEqualTo("some tradeoff");
+        assertThat(project.getTasks().get(1).getTradeoffs().get(0)).isEqualTo("some tradeoff");
         assertThat(project.getResources().get(0).getName()).isEqualTo("some resource");
-        assertThat(project.getOutcomes()).isEqualTo("some outcome");
-        assertThat(project.getInbox().getInboxItems().get(0)).isEqualTo("some inbox item");
+        assertThat(project.getOutcomes()).contains("some outcome");
+        assertThat(project.getInbox().getInboxItems().get(0).getName()).isEqualTo("some inbox item");
 
     }
 }

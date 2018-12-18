@@ -3,10 +3,10 @@ package io.ueb.projectlist.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoopList {
+public class Looplist {
     private String name;
 
-    private List<ListItem> ChecklistItems = new ArrayList<>();
+    private List<ListItem> listItems = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -16,11 +16,11 @@ public class LoopList {
         this.name = name;
     }
 
-    public List<ListItem> getChecklistItems() {
-        return ChecklistItems;
+    public List<ListItem> getLooplistItems() {
+        return listItems;
     }
 
-    public void setChecklistItems(List<ListItem> checklistItems) {
-        ChecklistItems = checklistItems;
+    public void setChecklistItems(List<ListItem> looplistItems) {
+        listItems = looplistItems;
     }
 }
