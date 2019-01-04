@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.*;
 
 public abstract class ProjectRepositoryTest {
 
-    private ProjectRepository projectRepository;
+    protected ProjectRepository projectRepository;
 
     @Test
     public void projectRepositoryCanSave_andRetrieve_a_Project(){

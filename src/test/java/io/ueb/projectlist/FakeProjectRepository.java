@@ -10,4 +10,8 @@ public class FakeProjectRepository implements ProjectRepository {
         this.projectCreateCalledWith = project;
         return projectCreateCalledWith;
     }
+
+    public Project findById(String name){
+        return projectCreateCalledWith;
+    }
 }
